@@ -1,5 +1,5 @@
 class RsvpsController < ApplicationController
-	before_filter :authenticate_user!, except: [:new, :thanks]
+	before_filter :authenticate_user!, except: [:new, :create, :thanks]
 
 	def index
 		event = Event.friendly.find(params[:event_id])
