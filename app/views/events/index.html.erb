@@ -1,0 +1,75 @@
+<h2>Events</h2>
+	<div class="row">
+		<%= link_to "Add New Event", new_event_path, class: 'waves-effect waves-light btn right'%>
+	</div>
+<div class="row centered place">
+<div class="event z-depth-1 col m5 s12">
+	<div class="avatar"><img src="https://scontent.xx.fbcdn.net/v/t1.0-1/936199_4173700999489_1145446020_n.jpg?oh=ba3caa0b7456ea717609f05e5c0fb17c&amp;oe=584DC81D" alt="936199 4173700999489 1145446020 n"></div>
+		<div class="information">
+			<div class="primary">
+				<div class="origin">
+					<div class="name">Bismarck, ND to</div></div>
+						<div class="titlename">Fargo, ND</div>
+						<div class="price"><a class="btn-floating btn waves-effect waves-light red"><i class="material-icons">list</i></a>
+        </div></div>
+						<div class="secondary">
+						<span class="date"><i class="mdi tiny mdi-calendar"></i><time data-localized="true" title="September 5, 2016 at 11:00pm SAST" datetime="2016-09-05T21:00:00Z" data-local="time" data-format="%a %b %e">Mon Sep 5</time></span>
+						<span class="time"><i class="mdi tiny mdi-clock"></i><time data-localized="true" title="September 5, 2016 at 11:00pm SAST" datetime="2016-09-05T21:00:00Z" data-local="time" data-format="%l:%M %P">11:00 pm</time></span>
+						<span class="seats"><i class="mdi mdi-account-outline"></i><i class="mdi mdi-account-outline"></i><i class="mdi mdi-account-outline"></i></span>
+						</div>
+			</div>
+</div>
+<% @events.each do |event| %>
+<div class="event z-depth-1 col m5 s12">
+	<div class="avatar"><%= link_to event_path(event) do %>
+	<%= image_tag event.image.url(:thumb) %>
+		<% end %>
+	</div>
+		<div class="information">
+			<div class="primary">
+						<div class="titlename truncate"><%= link_to event.eventname, event %></div>
+						</div>
+						<div class="secondary">
+						<span class="date"><%= event.date.strftime("%a %b %e") %></span>
+						<span class="time"><%= event.time %></span>
+						</div>
+						<div class="divider"></div>
+						<div class="tertiary">
+							<div class="rsvp-count">
+								<span>
+									<%= link_to 'View RSVPs', event_rsvps_path(event), class: 'label p' %>
+								 </span>
+							</div>
+							<div class="actions">
+								<%= link_to (edit_event_path(event)) do %>
+									 <i class="material-icons icon-purple">mode_edit</i>
+								<% end %>
+								<%= link_to (event_path(event)), method: :delete, data: { confirm: 'Are You Sure?'} do %>
+								<i class="material-icons icon-purple">delete</i>
+								<% end %>
+							</div>
+						</div>
+			</div>
+</div>
+<% end %>
+</div>
+<%= link_to "New Event", new_event_path, class: 'waves-effect waves-light btn'%>
+<table class="striped centered">
+
+<thead>
+<th>Event</th>
+<th>ID</th>
+<th>rsvps</th>
+<th>View Event</th>
+</thead>
+<tbody><% @events.each do |event| %>
+<tr>
+<td><%= event.eventname %></td>
+<td><%= event.id %></td>
+<td><%= link_to 'Rsvps', event_rsvps_path(event), class: 'btn' %></td>
+<td><%= link_to 'View Event', event_path(event), class: 'btn' %></td>
+</tr>
+<% end %>
+</tbody>
+
+</table>

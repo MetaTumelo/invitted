@@ -1,0 +1,5 @@
+@import "materialize/components/color";
+$primary-color: color("purple", "darken-3") !default;
+@import 'materialize';
+@import 'pages';
+@import 'jquery.timepicker';

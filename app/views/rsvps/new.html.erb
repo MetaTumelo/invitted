@@ -1,0 +1,27 @@
+<h4>Please RSVP</h4>
+<%= simple_form_for([@rsvp.event, @rsvp]) do |f| %>
+	<div class="row">
+	<div class="col m8 l6 s12 push8">
+	<div class="box z-depth-2">
+<form>
+	<div class="row">
+<%= f.collection_radio_buttons :status, [[true, ' Accept invitation '],[false, ' Decline regrettably']], :first, :last, checked: true, :class => "radio-inline" %>
+	</div>
+	<div class="row">
+		<div class="input-field col s12 m12">
+			<%= f.input :name, label: 'Name' %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="input-field col s12 m12">
+			<%= f.text_area :message, :maxlength => 140, class: 'materialize-textarea', id: 'textarea3', length: "140" %>
+			<%= f.label "Message" %>
+		</div>
+	</div>
+	<%= f.button :submit %>
+
+</form>
+	</div>
+</div>
+<% end %>
+</div>

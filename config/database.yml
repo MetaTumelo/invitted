@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: invitted_development
+  pool: 5
+  username: postgres
+  password: xxh@x0R5
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: invitted_test
+  pool: 5
+  username: postgres
+  password: xxh@x0R5
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: invitted_production
+  pool: 5
+  username: postgres
+  password: xxh@x0R5

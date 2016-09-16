@@ -1,0 +1,31 @@
+<div class="coniner">	
+		<div class="row sp">
+				<div class="col s12 m4">
+				<div class="box z-depth-3">
+				<div class="photo">
+				<%= image_tag @event.image.url(:medium) %>
+				</div>
+				</div>
+			</div>
+		
+				<div class="col s12 m8">	
+				<div class="box z-depth-3">
+					<h5><%= @event.eventname %></h5>
+					<div class="divider"></div>
+					
+					<p>WHEN: <%= @event.date.strftime("%A, %e %B  %Y") %> at <%= @event.time %></p>
+					<p>WHERE: <%= @event.venue %></p>
+					<div class="row"><%= link_to "RSVP For This Event", new_event_rsvp_path(@event), class: 'waves-effect waves-light btn' %></div>
+				</div>
+			</div>
+		</div>
+
+</div>
+
+<div class="box z-depth-3">
+		<div class="event-info">
+		<p> EVENT INFORMATION </p>
+		<div class="divider"></div>
+		<p><%= @event.description %></p>
+		</div>
+</div>

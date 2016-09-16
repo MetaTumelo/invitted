@@ -1,0 +1,232 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.page {
+	padding: 20px;
+}
+body {
+	background-color: #ebeff1;
+	}
+
+.label {
+    padding: 2px;
+    font-size: 0.8rem;
+    color: #fff;
+    border-radius: 2px;
+}
+.card-content-values {
+    padding: 10px 14px;
+}
+.card-action-values {
+    padding: 2px 14px;
+}
+.card-title-text {
+    font-size: 1.2rem;
+}
+.card-value {
+    font-size: 1.8rem;
+    margin: 0.2rem 0 0.2rem 0;
+    font-weight: bold;
+}
+.box .row {
+    margin-bottom: 0;
+}
+.p {
+    background-color: purple;
+}
+.r {
+    background-color: #ef5350;
+}
+.t {
+    background-color: #00c853;
+}
+.invitted__header-wrapper {
+    background: -webkit-linear-gradient(rgba(76,87,101,0.8), rgba(76,87,101,0.8)), url(/assets/header.jpg) no-repeat 0 0;
+    background: linear-gradient(rgba(76,87,101,0.8), rgba(76,87,101,0.8)), url(/assets/header.jpg) no-repeat 0 0;
+    background-size: 100%;
+    border-radius: 4px;
+    padding: 60px;
+    color: white;
+}
+.content-push {
+	margin-top: 20px;
+}
+.sp {
+	margin-top: 15px;
+}
+
+.box {
+    background-color: #fff;
+    border-color: rgba(136,136,136,0.3);
+    border-style: solid;
+    border-width: 1px 0 1px 5px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    border-left-color: mediumaquamarine;
+    margin: 0.95em 0;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #4D4D4D;
+    min-height: 100px;
+}
+.place .event {
+	float: left;
+	display: block;
+	margin-right: 1.61735%;
+}
+.event {
+    background-color: #fff;
+    border-color: rgba(136,136,136,0.3);
+    border-style: solid;
+    border-width: 1px 0 1px 5px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border-left-color: mediumaquamarine;
+    margin: 0.75em 0;
+    padding: 10px;
+   
+    margin-left: auto;
+    margin-right: auto;
+    color: #4D4D4D;
+    min-height: 100px;
+}
+.event .avatar {
+    float: left;
+    display: block;
+    margin-right: 1.61735%;
+    width: 15.31888%;
+    display: inline-block;
+    padding: 10px;
+    vertical-align: middle;
+}
+.event .avatar img {
+    border-radius: 20%;
+    display: block;
+}
+body img {
+    max-width: 100%;
+}
+.event .information:last-child {
+    margin-right: 0;
+}
+.event .information {
+    float: left;
+    display: block;
+    margin-right: 1.61735%;
+    width: 83.06378%;
+    display: inline-block;
+    float: none;
+    height: 100%;
+    vertical-align: middle;
+}
+.event .information .primary {
+    float: left;
+    display: block;
+    margin-right: 1.61735%;
+    width: 100%;
+}
+.event .information .primary .origin {
+    float: left;
+    display: block;
+    margin-right: 1.61735%;
+    width: 100%;
+}
+.event .information .primary .origin .name {
+    display: inline-block;
+    max-width: 80%;
+    vertical-align: middle;
+}
+.event .information .primary .titlename, .event .information .primary .price {
+    font-size: 1.5em;
+}
+.event .information .primary .titlename {
+    float: left;
+    display: block;
+    margin-right: 1.61735%;
+    width: 74.59566%;
+}
+.event .information .primary .price:last-child {
+    margin-right: 0;
+}
+.event .information .primary .price {
+    float: left;
+    display: block;
+    margin-right: 1.61735%;
+    width: 23.78699%;
+    font-weight: bold;
+    padding-right: 10px;
+    text-align: right;
+}
+.event .information .secondary:last-child {
+    margin-right: 0;
+}
+.event .information .secondary {
+    float: left;
+    display: block;
+    margin-right: 1.61735%;
+    width: 100%;
+}
+.event .information .secondary span.date, .event .information .secondary span.time {
+    margin-right: 10px;
+}
+.event .information .secondary span {
+    display: inline-block;
+}
+.fixed-action-btn {
+	position: static;
+	padding-top: 0px;
+}
+.event .information .tertiary {
+	float: left;
+    display: block;
+    margin-right: 1.61735%;
+    width: 100%;
+} 
+.event .information .tertiary .actions:last-child {
+    margin-right: 0;
+}
+.event .information .tertiary .actions {
+    float: left;
+    display: block;
+    margin-right: 1.61735%;
+    width: 40%;
+    font-weight: bold;
+    padding-right: 10px;
+    text-align: right;
+}
+.event .information .tertiary .rsvp-count {
+    float: left;
+    display: block;
+    margin-right: 1.61735%;
+    width: 58.38265%;
+}
+
+.photo img {
+
+    border-radius: 10px;
+}
+
+i.icon-purple {
+    color: purple;
+}
+.tb td {
+    padding: 1px 1px;
+}
+.rsvp_name {
+    color: purple;
+    font-weight: bold;
+}
+.rsvp_note {
+    font-size: 13px;
+}
+.rsvp_date {
+    font-size: 0.9rem;
+}
+.rsvp_status {
+    font-size: 0.9rem;
+}
+body {
+    margin: 0 0 20px;
+  }

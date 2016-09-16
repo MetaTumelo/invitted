@@ -1,0 +1,36 @@
+<h3>Edit</h3>
+<%= simple_form_for(@event) do |f| %>
+	
+
+<div class="row">
+    <form class="col m6 l6 s12 push8">
+      <div class="row">
+        <div class="input-field col s6">
+          <%= f.input :eventname, label: 'Event Name', class: 'validate' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s3">
+          <%= f.date_field :date, :value => Date.today.strftime("%d %B, %Y") , :autocomplete => :off, class: 'datepicker' %>
+        </div>
+        <div class="input-field col s3">
+          <%= f.text_field :time, :value => Time.now.strftime("%H:%M") %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <%= f.text_field :venue %>
+          <%= f.label "venue" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <%= f.text_area :description, class: 'materialize-textarea' %>
+          <%= f.label "Description" %>
+        </div>
+      </div>
+
+        <%= f.button :submit, "Submit Changes" %> 
+      
+    </form>
+  </div><% end %>
