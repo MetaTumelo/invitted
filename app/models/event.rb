@@ -8,7 +8,7 @@ class Event < ApplicationRecord
   		slug.blank? || eventname_changed?
   	end
 
-  	has_attached_file :image, styles: { medium: "250x250>", thumb: "100x150>" }, default_url: "/images/:style/placeholder.png"
+  	has_attached_file :image,:storage => :cloudinary, styles: { medium: "250x250>", thumb: "100x150>" }, default_url: "/images/:style/placeholder.png"
   	validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
 	validates :eventname, presence: true

@@ -1,30 +1,42 @@
-<h3>Edit</h3>
+<h3>Edit Event</h3>
 <%= simple_form_for(@event) do |f| %>
 	
 
 <div class="row">
-    <form class="col m6 l6 s12 push8">
+<div class="col m10 l6 s12"><div class="box z-depth-2">
+    <form>
       <div class="row">
-        <div class="input-field col s6">
+        <div class="input-field col s12 m12">
           <%= f.input :eventname, label: 'Event Name', class: 'validate' %>
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s3">
+        <div class="file-field input-field col s12 m12">
+          <div class="btn">
+          <span>Upload Image</span>
+          <%= f.input_field :image %>
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text"/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6 m6">
           <%= f.date_field :date, :value => Date.today.strftime("%d %B, %Y") , :autocomplete => :off, class: 'datepicker' %>
         </div>
-        <div class="input-field col s3">
+        <div class="input-field col s6 m6">
           <%= f.text_field :time, :value => Time.now.strftime("%H:%M") %>
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s6">
+        <div class="input-field col s12 m12">
           <%= f.text_field :venue %>
           <%= f.label "venue" %>
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s6">
+        <div class="input-field col s12 m12">
           <%= f.text_area :description, class: 'materialize-textarea' %>
           <%= f.label "Description" %>
         </div>
@@ -34,3 +46,4 @@
       
     </form>
   </div><% end %>
+  </div></div>

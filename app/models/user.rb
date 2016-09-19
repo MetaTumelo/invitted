@@ -3,16 +3,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   validates :username, :email, :encrypted_password, presence: true
 
   has_many :events
   has_many :rsvps, through: :events
 
-protected
-
-	def confirmation_required?
-	 false
-	end
 end

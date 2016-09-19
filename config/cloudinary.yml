@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: ooglermarc
+  api_key: '866283692558674'
+  api_secret: G_IaKB5pz2V_dFXuk4ECKolUGQg
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: ooglermarc
+  api_key: '866283692558674'
+  api_secret: G_IaKB5pz2V_dFXuk4ECKolUGQg
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: ooglermarc
+  api_key: '866283692558674'
+  api_secret: G_IaKB5pz2V_dFXuk4ECKolUGQg
+  enhance_image_tag: true
+  static_image_support: false

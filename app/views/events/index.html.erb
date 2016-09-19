@@ -1,24 +1,9 @@
-<h2>Events</h2>
+<h4>Events</h4>
 	<div class="row">
 		<%= link_to "Add New Event", new_event_path, class: 'waves-effect waves-light btn right'%>
 	</div>
 <div class="row centered place">
-<div class="event z-depth-1 col m5 s12">
-	<div class="avatar"><img src="https://scontent.xx.fbcdn.net/v/t1.0-1/936199_4173700999489_1145446020_n.jpg?oh=ba3caa0b7456ea717609f05e5c0fb17c&amp;oe=584DC81D" alt="936199 4173700999489 1145446020 n"></div>
-		<div class="information">
-			<div class="primary">
-				<div class="origin">
-					<div class="name">Bismarck, ND to</div></div>
-						<div class="titlename">Fargo, ND</div>
-						<div class="price"><a class="btn-floating btn waves-effect waves-light red"><i class="material-icons">list</i></a>
-        </div></div>
-						<div class="secondary">
-						<span class="date"><i class="mdi tiny mdi-calendar"></i><time data-localized="true" title="September 5, 2016 at 11:00pm SAST" datetime="2016-09-05T21:00:00Z" data-local="time" data-format="%a %b %e">Mon Sep 5</time></span>
-						<span class="time"><i class="mdi tiny mdi-clock"></i><time data-localized="true" title="September 5, 2016 at 11:00pm SAST" datetime="2016-09-05T21:00:00Z" data-local="time" data-format="%l:%M %P">11:00 pm</time></span>
-						<span class="seats"><i class="mdi mdi-account-outline"></i><i class="mdi mdi-account-outline"></i><i class="mdi mdi-account-outline"></i></span>
-						</div>
-			</div>
-</div>
+
 <% @events.each do |event| %>
 <div class="event z-depth-1 col m5 s12">
 	<div class="avatar"><%= link_to event_path(event) do %>

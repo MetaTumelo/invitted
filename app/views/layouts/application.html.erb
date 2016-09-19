@@ -14,23 +14,41 @@
   <div class="container">
     <div class="nav-wrapper">
       <% if user_signed_in? %>
-      <%= link_to "Invitted", events_path %>
+      <%= link_to "Invitted(Beta)", events_path %>
       <% else %>
-      <%= link_to "Invitted", root_path %>
+      <%= link_to "Invitted(Beta)", root_path %>
       <% end %>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <% if user_signed_in? %>
-        <li><%= link_to 'Sign out', destroy_user_session_path, method: 'delete' %></li>
+        
+        <li>
+           <a class='dropdown-button btn-floating btn-large purple lighten-1' href='#' data-activates='dropdown1'><i class="white-text material-icons icon-">perm_identity</i></a>
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+            <li><%= link_to 'Profile', edit_user_registration_path %></li><li class="divider"></li>
+              <li><%= link_to 'Sign out', destroy_user_session_path, method: 'delete' %></li>
+      
+            </ul>
+        </li>
         <% else %>
         <li><%= link_to 'Login', new_user_session_path, class: 'waves-effect waves-light btn purple darken-3' %></li>
         <li><%= link_to 'Sign Up', new_user_registration_path, class: 'waves-effect waves-light btn purple darken-3' %></li>
         <% end %>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><i class="material-icons">store</i><%= link_to "Home", root_path, class: 'waves-effect waves-purple' %></li>
+        <li><%= link_to (root_path), class: 'waves-effect waves-purple' do %>
+        <i class="material-icons">store</i>Home
+        <% end %></li>
         <% if user_signed_in? %>
-        <li><%= link_to 'Sign out', destroy_user_session_path, method: 'delete' %></li>
+        <li><%= link_to (events_path), class: 'waves-effect waves-purple' do %>
+          <i class="material-icons">web</i>Dashboard
+          <% end %>
+        </li>
+        <li><%= link_to destroy_user_session_path, method: 'delete' do %>
+          <i class="material-icons">input</i>Sign Out
+          <% end %>
+        </li>
         <% else %>
         <li><%= link_to 'Login', new_user_session_path %></li>
         <li><%= link_to 'Sign Up', new_user_registration_path %></li>
@@ -56,6 +74,16 @@
     $('input#input_text, textarea#textarea3').characterCounter();
     $('span:contains("Attending")').closest(".rsvp_status").addClass("t");
     $('span:contains("Declined")').closest(".rsvp_status").addClass("r");
+  $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrain_width: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: false, // Displays dropdown below the button
+      alignment: 'left' // Displays dropdown with edge aligned to the left of button
+    }
+  );
     $('.datepicker').pickadate({ 
     min: new Date(),
     onSet: function (ele) {

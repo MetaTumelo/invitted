@@ -15,7 +15,7 @@ gem 'exception_handler', '~> 0.5.1'
 gem 'materialize-sass', '~> 0.97.7'
 gem 'simple_form', '~> 3.3', '>= 3.3.1'
 gem 'paperclip', '~> 5.1'
-
+gem 'paperclip-cloudinary'
 gem 'devise'
 
 group :development, :test do
@@ -26,6 +26,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'better_errors', '~> 2.1', '>= 2.1.1'
+  gem "letter_opener"
   gem 'web-console'
 end
 
