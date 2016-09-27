@@ -13,9 +13,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'friendly_id', '~> 5.1'
 gem 'exception_handler', '~> 0.5.1'
 gem 'materialize-sass', '~> 0.97.7'
-gem 'simple_form', '~> 3.3', '>= 3.3.1'
 gem 'paperclip', '~> 5.1'
-gem 'paperclip-cloudinary'
+gem 'aws-sdk', '~> 2.3'
 gem 'devise'
 
 group :development, :test do
