@@ -37,10 +37,6 @@ class RsvpsController < ApplicationController
     	end
 	end
 
-	def thanks
-   		render params[:page]
-  	end
-
   	def destroy
   		event = Event.friendly.find(params[:event_id])
 		@rsvps = event.rsvps.find(params[:id])
