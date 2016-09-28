@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :events do
   	resources :rsvps
   end
+  get "/:page" => "pages#show"
   get "/:page" => "rsvps#thanks"
+
   root 'pages#index'
 end

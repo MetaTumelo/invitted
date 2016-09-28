@@ -1,4 +1,4 @@
-<div class="content-push">
+<div class="content-push"></div>
 <div class="invitted__header-wrapper z-depth-3">
 	<div class="header-wapper-content center">
 		<h4>Receive and manage RSVPs for Birthdays, Weddings, Engagements, Parties and other Events  for Free</h4>
@@ -9,10 +9,136 @@
 </div>
 <div class="divider sp"></div>
 <div class="invitted-body-content">
+
+
+       <h4 class="center">Event Examples</h4>
+          <div class="row centered place">
+          
+    <div class="event z-depth-1 col m5 s12">
+      <div class="avatar"><img src="https://static.pexels.com/photos/50855/pexels-photo-50855-large.jpeg">
+      </div>
+    <div class="information">
+      <div class="primary">
+            <div class="titlename truncate"><%= link_to "Tim's Birthday", "/Tim-s-Birthday" %></div>
+            </div>
+            <div class="secondary">
+            <span class="date">Friday, 10 Nov</span>
+            <span class="time">12:30PM</span>
+            </div>
+            <div class="divider"></div>
+            <div class="tertiary">
+              <div class="rsvp-count">
+                <span class="label g" style="cursor:pointer">
+                  View RSVPs
+                 </span>
+              </div>
+              <div class="actions">
+                
+                   <i class="material-icons icon-purple">mode_edit</i>
+                
+                
+                <i class="material-icons icon-purple">delete</i>
+               
+              </div>
+            </div>
+      </div>
+</div>
+
+<div class="event z-depth-1 col m5 s12">
+      <div class="avatar"><img src="http://www.confettidaydreams.com/wp-content/uploads/2013/01/Whimsical-Balloon-Themed-Engagement-Photo-Shoot-28.jpg">
+      </div>
+    <div class="information">
+      <div class="primary">
+            <div class="titlename truncate"><%= link_to "Tom & Jane's Engagement Party", "/Tom-and-Jane-s-Engagement-Party" %></div>
+            </div>
+            <div class="secondary">
+            <span class="date">Friday, 10 Nov</span>
+            <span class="time">12:30PM</span>
+            </div>
+            <div class="divider"></div>
+            <div class="tertiary">
+              <div class="rsvp-count">
+                <span class="label g" style="cursor:pointer">
+                  View RSVPs
+                 </span>
+              </div>
+              <div class="actions">
+                
+                   <i class="material-icons icon-purple">mode_edit</i>
+                
+                
+                <i class="material-icons icon-purple">delete</i>
+               
+              </div>
+            </div>
+      </div>
+</div>
+<div class="event z-depth-1 col m5 s12">
+      <div class="avatar"><img src="http://67.media.tumblr.com/5568d4708189790287723a8f2d8619ae/tumblr_nakw2tsP861teue7jo1_1280.jpg">
+      </div>
+    <div class="information">
+      <div class="primary">
+            <div class="titlename truncate"><%= link_to "Julia's Graduation Party", "/Julia-s-Graduation-Party" %></div>
+            </div>
+            <div class="secondary">
+            <span class="date">Friday, 10 Nov</span>
+            <span class="time">12:30PM</span>
+            </div>
+            <div class="divider"></div>
+            <div class="tertiary">
+              <div class="rsvp-count">
+                <span class="label g" style="cursor:pointer">
+                  View RSVPs
+                 </span>
+              </div>
+              <div class="actions">
+                
+                   <i class="material-icons icon-purple">mode_edit</i>
+                
+                
+                <i class="material-icons icon-purple">delete</i>
+               
+              </div>
+            </div>
+      </div>
+</div>
+<div class="event z-depth-1 col m5 s12">
+      <div class="avatar"><img src="http://www.confettidaydreams.com/wp-content/uploads/Travel-Themed-Engagement-Photos-20.jpeg">
+      </div>
+    <div class="information">
+      <div class="primary">
+            <div class="titlename truncate"><%= link_to "Ken and Tina's Wedding", "/Ken-and-Tina-s-Wedding" %></div>
+            </div>
+            <div class="secondary">
+            <span class="date">Thu, 3 May</span>
+            <span class="time">10:30PM</span>
+            </div>
+            <div class="divider"></div>
+            <div class="tertiary">
+              <div class="rsvp-count">
+                <span class="label g" style="cursor:pointer">
+                  View RSVPs
+                 </span>
+              </div>
+              <div class="actions">
+                
+                   <i class="material-icons icon-purple">mode_edit</i>
+                
+                
+                <i class="material-icons icon-purple">delete</i>
+               
+              </div>
+            </div>
+      </div>
+</div>
+</div>
+    <div class="divider z-depth-1"></div>
+
+<footer>
 <h4 class="center">How It Works</h4>
-	<div class="row">
-		<div class="col s12 m4">
-			<div class="card blue-grey darken-1 z-depth-3">
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="card blue-grey darken-1 z-depth-3">
             <div class="card-content white-text">
               <span class="card-title">1. Add Your Event</span>
               <p>After signing up, add your event information and details.</p>
@@ -21,9 +147,9 @@
               <%= link_to "GET STARTED", new_user_registration_path, class: 'waves-effect waves-light btn' %>
             </div>
           </div>
-		</div>
-		<div class="col s12 m4">
-			<div class="card blue-grey darken-1 z-depth-3">
+    </div>
+    <div class="col s12 m4">
+      <div class="card blue-grey darken-1 z-depth-3">
             <div class="card-content white-text">
               <span class="card-title">2. Share Event Link</span>
               <p>Share your event page link with friends, invitees and guests.</p>
@@ -32,9 +158,9 @@
               <%= link_to "GET STARTED", new_user_registration_path, class: 'waves-effect waves-light btn' %>
             </div>
           </div>
-		</div>
-		<div class="col s12 m4">
-			<div class="card blue-grey darken-1 z-depth-3">
+    </div>
+    <div class="col s12 m4">
+      <div class="card blue-grey darken-1 z-depth-3">
             <div class="card-content white-text">
               <span class="card-title">3. Receive RSVPs</span>
               <p>Your invitees can reply by accepting or declining the invitation.</p>
@@ -43,7 +169,8 @@
               <%= link_to "GET STARTED", new_user_registration_path, class: 'waves-effect waves-light btn' %>
             </div>
           </div>
-		</div>
-	</div>
+    </div>
+    </div>
 </div>
 </div>
+</footer>
