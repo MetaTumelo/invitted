@@ -38,23 +38,3 @@
 </div>
 <% end %>
 </div>
-<%= link_to "New Event", new_event_path, class: 'waves-effect waves-light btn'%>
-<table class="striped centered">
-
-<thead>
-<th>Event</th>
-<th>ID</th>
-<th>rsvps</th>
-<th>View Event</th>
-</thead>
-<tbody><% @events.each do |event| %>
-<tr>
-<td><%= event.eventname %></td>
-<td><%= event.id %></td>
-<td><%= link_to 'Rsvps', event_rsvps_path(event), class: 'btn' %></td>
-<td><%= link_to 'View Event', event_path(event), class: 'btn' %></td>
-</tr>
-<% end %>
-</tbody>
-
-</table>

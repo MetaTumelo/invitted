@@ -22,8 +22,8 @@
             <div class="titlename truncate"><%= link_to "Tim's Birthday", "/Tim-s-Birthday" %></div>
             </div>
             <div class="secondary">
-            <span class="date">Friday, 10 Nov</span>
-            <span class="time">12:30PM</span>
+            <span class="date"><%= Time.at(Time.now + 10.days).strftime("%a %b %e") %></span>
+            <span class="time">06:30PM</span>
             </div>
             <div class="divider"></div>
             <div class="tertiary">
@@ -52,8 +52,8 @@
             <div class="titlename truncate"><%= link_to "Tom & Jane's Engagement Party", "/Tom-and-Jane-s-Engagement-Party" %></div>
             </div>
             <div class="secondary">
-            <span class="date">Friday, 10 Nov</span>
-            <span class="time">12:30PM</span>
+            <span class="date"><%= Time.at(Time.now + 12.days).strftime("%a %b %e") %></span>
+            <span class="time">06:30PM</span>
             </div>
             <div class="divider"></div>
             <div class="tertiary">
@@ -81,7 +81,7 @@
             <div class="titlename truncate"><%= link_to "Julia's Graduation Party", "/Julia-s-Graduation-Party" %></div>
             </div>
             <div class="secondary">
-            <span class="date">Friday, 10 Nov</span>
+            <span class="date"><%= Time.at(Time.now + 5.days).strftime("%a %b %e") %></span>
             <span class="time">12:30PM</span>
             </div>
             <div class="divider"></div>
@@ -110,8 +110,8 @@
             <div class="titlename truncate"><%= link_to "Ken and Tina's Wedding", "/Ken-and-Tina-s-Wedding" %></div>
             </div>
             <div class="secondary">
-            <span class="date">Thu, 3 May</span>
-            <span class="time">10:30PM</span>
+            <span class="date"><%= Time.at(Time.now + 25.days).strftime("%a %b %e") %></span>
+            <span class="time">05:00PM</span>
             </div>
             <div class="divider"></div>
             <div class="tertiary">
@@ -173,4 +173,6 @@
     </div>
 </div>
 </div>
+<div class="divider"></div>
+<div class="container">© Invitted <%= Time.now.strftime("%Y") %></div>
 </footer>
