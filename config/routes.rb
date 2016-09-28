@@ -8,6 +8,5 @@ Rails.application.routes.draw do
   	resources :rsvps
   end
   get "/:page" => "pages#show"
-  get 'pages/Ken-and-Tina-s-Wedding'
   root 'pages#index'
 end
