@@ -1,4 +1,6 @@
+<section class="section">
 <div class="content-push"></div>
+<div class="container">
 <div class="invitted__header-wrapper z-depth-3">
 	<div class="header-wapper-content center">
 		<h4>Receive and manage RSVPs for Birthdays, Weddings, Engagements, Parties and other Events  for Free</h4>
@@ -7,9 +9,13 @@
 		</div>
 	</div>
 </div>
-<div class="divider sp"></div>
-<div class="invitted-body-content">
+</div> <!-- Container close -->
 
+<div class="sp"></div>
+</section>
+<div class="invitted-body-content">
+<section>
+<div class="container">
 
        <h4 class="center">Event Examples</h4>
           <div class="row centered place">
@@ -132,9 +138,11 @@
       </div>
 </div>
 </div>
-    <div class="divider z-depth-1"></div>
-
-<footer>
+  </div><!-- Container close -->
+</section>
+    
+<section class="section">
+<div class="container">
 <h4 class="center">How It Works</h4>
   <div class="row">
     <div class="col s12 m4">
@@ -172,7 +180,52 @@
     </div>
     </div>
 </div>
+</section>
+<!-- Container close -->
+  
+<section>
+  <div class="container">
+  <h4 class="center">What Our Users Say</h4>
+  <div class="row">
+    <div class="col s12 m4">
+        <div class="pic center"><img src="https://d1xejl9xcsndu9.cloudfront.net/wp-content/uploads/2013/03/02_MAU_minslide_0059a_636x636_ft.jpg"></div>
+        <p class="center">Jake & Mercy Adams</p>
+        <div class="divider z-depth-1"></div>
+        <p>"Invitted was very easy to use for our Wedding RSVPS."</p>
+    </div>
+    <div class="col s12 m4">
+        <div class="pic center"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSgD79omIyMLMItmtbfbzffLZeGuBxUNWnNQvHterXOVtFY_3KJ"></div>
+        <p class="center">John Myers</p>
+        <div class="divider z-depth-1"></div>
+        <p>"Saved me lots of time and was very effective."</p>
+    </div>
+    <div class="col s12 m4">
+        <div class="pic center"><img src="http://cdnpix.com/show/imgs/7e08735d879c148ee9f3f82b3f230192.jpg"></div>
+        <p class="center">Tracy, Milly & Sam</p>
+        <div class="divider z-depth-1"></div>
+        <p>"The easiest RSVP system we have ever used."</p>
+    </div>
+
+  </div>
+  </div><!-- Container close -->
+  </section>
 </div>
-<div class="divider"></div>
-<div class="container">© Invitted <%= Time.now.strftime("%Y") %></div>
-</footer>
+
+     <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Invitted</h5>
+                <p class="grey-text text-lighten-4">The easiest way to receive RSVPs</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+               
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © <%= Time.now.strftime("%Y") %> Copyright
+            </div>
+          </div>
+        </footer>

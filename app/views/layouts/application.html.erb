@@ -14,23 +14,22 @@
   <div class="container">
     <div class="nav-wrapper">
       <% if user_signed_in? %>
-      <%= link_to "Invitted(Beta)", events_path %>
+      <%= link_to (events_path) do %>
+        <%= image_tag src="http://res.cloudinary.com/ooglermarc/image/upload/v1476450148/Logo_c1cii7.png", class: "brand" %>
+      <% end %>
       <% else %>
-      <%= link_to "Invitted(Beta)", root_path %>
+      <%= link_to (root_path) do %>
+        <%= image_tag src="http://res.cloudinary.com/ooglermarc/image/upload/v1476450148/Logo_c1cii7.png", class: "brand" %>
+      <% end %>
       <% end %>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <% if user_signed_in? %>
         
-        <li>
-           <a class='dropdown-button btn-floating btn' href='#' data-activates='dropdown1'><i class="white-text material-icons">perm_identity</i></a>
-            <!-- Dropdown Structure -->
-            <ul id='dropdown1' class='dropdown-content'>
             <li><%= link_to 'Profile', edit_user_registration_path %></li><li class="divider"></li>
               <li><%= link_to 'Sign out', destroy_user_session_path, method: 'delete' %></li>
       
             </ul>
-        </li>
         <% else %>
         <li><%= link_to 'Login', new_user_session_path, class: 'waves-effect waves-light btn purple darken-3' %></li>
         <li><%= link_to 'Sign Up', new_user_registration_path, class: 'waves-effect waves-light btn purple darken-3' %></li>

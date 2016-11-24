@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Invitted</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<%= stylesheet_link_tag "application", media: "all","data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header>
+
+  <nav>
+  <div class="container">
+    <div class="nav-wrapper">
+      <% if user_signed_in? %>
+
+      <%= link_to (events_path) do %>
+        <%= image_tag src="http://res.cloudinary.com/ooglermarc/image/upload/v1476450148/Logo_c1cii7.png", class: "brand" %>
+      <% end %>
+      <% else %>
+      <%= link_to (root_path) do %>
+        <%= image_tag src="http://res.cloudinary.com/ooglermarc/image/upload/v1476450148/Logo_c1cii7.png", class: "brand" %>
+      <% end %>
+      <% end %>
+           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+        <% if user_signed_in? %>
+        
+        <li><%= link_to 'Dashboard', events_path, class: "waves-effect waves-light btn" %></li>
+        <% else %>
+        <li><%= link_to 'Login', new_user_session_path, class: 'waves-effect waves-light btn purple darken-3' %></li>
+        <li><%= link_to 'Sign Up', new_user_registration_path, class: 'waves-effect waves-light btn purple darken-3' %></li>
+        <% end %>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><%= link_to (root_path), class: 'waves-effect waves-purple' do %>
+        <i class="material-icons">store</i>Home
+        <% end %></li>
+        <% if user_signed_in? %>
+        <li><%= link_to (events_path), class: 'waves-effect waves-purple' do %>
+          <i class="material-icons">web</i>Dashboard
+          <% end %>
+        </li>
+        <li><%= link_to destroy_user_session_path, method: 'delete' do %>
+          <i class="material-icons">input</i>Sign Out
+          <% end %>
+        </li>
+        <% else %>
+        <li><%= link_to 'Login', new_user_session_path %></li>
+        <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  </nav>
+	</header>
+  <div>
+     <script type="text/javascript">
+    $(".button-collapse").sideNav();
+    $('input#input_text, textarea#textarea3').characterCounter();
+    $('span:contains("Attending")').closest(".rsvp_status").addClass("t");
+    $('span:contains("Declined")').closest(".rsvp_status").addClass("r");
+  $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrain_width: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: false, // Displays dropdown below the button
+      alignment: 'left' // Displays dropdown with edge aligned to the left of button
+    }
+  );
+    $('.datepicker').pickadate({ 
+    min: new Date(),
+    onSet: function (ele) {
+   if(ele.select){
+          this.close();
+      }
+    }
+  });
+    $('#clock').timepicker();
+  </script>
+  </div>
+  
+<%= yield %>
+  
+</body>
+   
+</html>

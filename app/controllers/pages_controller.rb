@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+	layout "frontpage"
+	
 	def index
 	end
 	def show
